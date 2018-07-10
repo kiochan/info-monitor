@@ -79,7 +79,13 @@ import Info from 'info'
 }()
 ```
 
-### User-Defined Panel  
+Bookmarklet
+You can add this code to any page using the following bookmarklet:
+```javascript
+javascript:(function(){var script=document.createElement('script');script.onload=function(){var m=new Info();document.body.appendChild(m.getElement());requestAnimationFrame(function loop(){m.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/StudioASC/node-info/master/release/info.min.js';document.head.appendChild(script);})()
+```
+
+## User-Defined Panel  
 Create your own classes and extend it with my `Info` or `InfoProto` class
 
 > `InfoProto` dosen't contain any panel.
