@@ -53,7 +53,7 @@ git clone https://github.com/mrdoob/stats.js.git
 
 1. Install
 ```
-npm install --save info
+npm install --save info-monitor
 ```
 
 2. Just import (javascript and typescript both are fine)
