@@ -1,5 +1,5 @@
 {
-  "name": "info",
+  "name": "info-monitor",
   "version": "1.0.0",
   "description": "a JavaScript Performance Monitor",
   "main": "index.js",
@@ -7,6 +7,7 @@
     "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": ["fps", "webgl", "performance", "typescript"],
   "typings": "./dist/index.d.ts",
   "author": "StudioASC",
   "license": "ISC",
