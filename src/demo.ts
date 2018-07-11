@@ -1,7 +1,6 @@
 declare var Info:any
 
-!function() {
-
+!function(){
   let monitor = new Info()
   document.body.appendChild(monitor.getElement())
   monitor.displayPanel(0)
@@ -11,5 +10,4 @@ declare var Info:any
     requestAnimationFrame(update)
   }
   requestAnimationFrame(update)
-
 }()
