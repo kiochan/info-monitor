@@ -1,23 +1,6 @@
 /// <reference types="node" />
 import { EventEmitter } from 'events';
-export interface PanelOptions {
-    name: string;
-    fgColor: string;
-    bgColor: string;
-}
-export declare class Panel {
-    private canvas;
-    private context;
-    private max;
-    private min;
-    private name;
-    private fgColor;
-    private bgColor;
-    constructor(options: PanelOptions);
-    update(value: number, maxValue: number): void;
-    getElement(): HTMLCanvasElement;
-    getName(): string;
-}
+import { Panel } from './panel';
 export declare class InfoProto extends EventEmitter {
     private _htmlElement;
     private _currentPanelId;
@@ -35,10 +18,7 @@ export declare class InfoProto extends EventEmitter {
     initPanelData(name: string, value: any): void;
     setPanelData(name: string, value: any): void;
     getPanelData(name: string): any;
-    begin(): number;
-    end(): number;
-    update(): number;
-}
-export default class Info extends InfoProto {
-    constructor();
+    begin(): any;
+    end(): any;
+    update(): any;
 }
