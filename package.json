@@ -1,6 +1,6 @@
 {
   "name": "info-monitor",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "a JavaScript Performance Monitor",
   "main": "./build/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["fps", "webgl", "performance", "typescript"],
+  "keywords": ["fps", "webgl", "stats", "performance", "typescript"],
   "typings": "./build/index.d.ts",
   "author": "StudioASC",
   "license": "MIT",
