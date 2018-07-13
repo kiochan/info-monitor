@@ -17,7 +17,7 @@ This class provides a simple info box that will help you monitor your code perfo
 
 1. Clone the repo: (or just download `release/info.min.js`)
 ```
-git clone https://github.com/mrdoob/stats.js.git
+git clone https://github.com/StudioASC/node-info
 ```
 
 2. Link `release/info.min.js` in your html file before `</body>` tag:
