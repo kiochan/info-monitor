@@ -15,16 +15,23 @@ This class provides a simple info box that will help you monitor your code perfo
 
 ### via `<script>` Tag
 
-1. Clone the repo: (or just download `release/info.min.js`)
+1. Get the info.min.js
+
+You can find it in git repo `release/info.min.js`
 ```
 git clone https://github.com/StudioASC/node-info
 ```
 
-2. Link `release/info.min.js` in your html file before `</body>` tag:
+or via bower
+```
+bower install info-monitor
+```
+
+2. Move `info.min.js` into your project, then link script into your html files before `</body>` tag:
 ```html
 <!-- ... some code -->
 
-    <script src="js/info.min.js" charset="utf-8"></script>
+    <script src="<path-to-js>/info.min.js" charset="utf-8"></script>
     <script type="text/javascript">
       !function() {
         var monitor = new Info()
