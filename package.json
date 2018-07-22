@@ -10,13 +10,19 @@
     "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["fps", "webgl", "stats", "performance", "typescript"],
+  "keywords": [
+    "fps",
+    "webgl",
+    "stats",
+    "performance",
+    "typescript"
+  ],
   "typings": "./build/index.d.ts",
   "author": "StudioASC",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/StudioASC/node-info.git"
+    "type": "git",
+    "url": "https://github.com/StudioASC/node-info.git"
   },
   "dependencies": {},
   "devDependencies": {
