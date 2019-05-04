@@ -1,1 +1,2 @@
-declare let now: any;
+declare const now: () => number;
+export default now;

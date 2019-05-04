@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { EventEmitter } from 'events';
 import { Panel } from './panel';
 export declare class InfoProto extends EventEmitter {
@@ -18,7 +17,7 @@ export declare class InfoProto extends EventEmitter {
     initPanelData(name: string, value: any): void;
     setPanelData(name: string, value: any): void;
     getPanelData(name: string): any;
-    begin(): any;
-    end(): any;
-    update(): any;
+    begin(): number;
+    end(): number;
+    update(): number;
 }
