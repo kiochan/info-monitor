@@ -1,9 +1,5 @@
-let now
+const now: () => number = (performance) ?
+  performance.now.bind(performance) :
+  Date.now.bind(Date)
 
-if (performance) {
-  now = performance.now.bind(performance)
-} else {
-  now = Date.now.bind(Date)
-}
-
-module.exports = now
+export default now

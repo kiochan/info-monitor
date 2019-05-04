@@ -1,13 +1,13 @@
-declare var Info:any
+declare var Info: any
 
-!function(){
+;(function () {
   let monitor = new Info()
   document.body.appendChild(monitor.getElement())
   monitor.displayPanel(0)
 
-  function update() {
+  function update () {
     monitor.update()
     requestAnimationFrame(update)
   }
   requestAnimationFrame(update)
-}()
+})()

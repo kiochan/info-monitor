@@ -1,9 +1,13 @@
 const PR = Math.round(window.devicePixelRatio || 1)
 
-const WIDTH = 80 * PR, HEIGHT = 48 * PR,
-  TEXT_X = 3 * PR, TEXT_Y = 2 * PR,
-  GRAPH_X = 3 * PR, GRAPH_Y = 15 * PR,
-  GRAPH_WIDTH = 74 * PR, GRAPH_HEIGHT = 30 * PR
+const WIDTH = 80 * PR
+const HEIGHT = 48 * PR
+const TEXT_X = 3 * PR
+const TEXT_Y = 2 * PR
+const GRAPH_X = 3 * PR
+const GRAPH_Y = 15 * PR
+const GRAPH_WIDTH = 74 * PR
+const GRAPH_HEIGHT = 30 * PR
 
 export interface PanelOptions {
   name: string
@@ -21,7 +25,7 @@ export class Panel {
   private fgColor: string = '#fff'
   private bgColor: string = '#000'
 
-  constructor(options: PanelOptions) {
+  constructor (options: PanelOptions) {
     this.name = options.name
 
     let canvas = document.createElement('canvas')
@@ -29,7 +33,7 @@ export class Panel {
     canvas.height = HEIGHT
     canvas.style.cssText = 'width:80px;height:48px'
 
-    var context = canvas.getContext('2d')
+    let context = canvas.getContext('2d')
     context.font = `bold ${9 * PR}px Helvetica,Arial,sans-serif`
     context.textBaseline = 'top'
 
@@ -48,7 +52,7 @@ export class Panel {
     this.context = context
   }
 
-  public update(value: number, maxValue: number) {
+  public update (value: number, maxValue: number) {
     let min = this.min = Math.min(this.min, value)
     let max = this.max = Math.max(this.max, value)
 
@@ -68,11 +72,11 @@ export class Panel {
     context.fillRect(GRAPH_X + GRAPH_WIDTH - PR, GRAPH_Y, PR, round((1 - (value / maxValue)) * GRAPH_HEIGHT))
   }
 
-  public getElement() {
+  public getElement () {
     return this.canvas
   }
 
-  public getName() {
+  public getName () {
     return this.name
   }
 }

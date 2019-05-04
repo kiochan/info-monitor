@@ -1,10 +1,10 @@
 import { InfoProto } from './info-proto'
 import { Panel } from './panel'
 
-const __performance = performance as any
+const Performance = window.performance as any
 
 export class Info extends InfoProto {
-  constructor() {
+  constructor () {
     super()
 
     this.addPanel(new Panel({
@@ -21,7 +21,7 @@ export class Info extends InfoProto {
       bgColor: '#220'
     }))
 
-    if (__performance && __performance.memory) {
+    if (Performance && Performance.memory) {
       this.addPanel(new Panel({
         name: 'MB',
         fgColor: '#f0f',
@@ -45,7 +45,7 @@ export class Info extends InfoProto {
         that.setPanelData('frames', 0)
         let memPanel = that.getPanelByName('MB')
         if (memPanel) {
-          var memory = __performance.memory
+          let memory = Performance.memory
           memPanel.update(memory.usedJSHeapSize / 1048576, memory.jsHeapSizeLimit / 1048576)
         }
       }

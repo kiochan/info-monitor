@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events'
 import { Panel } from './panel'
-let now = require('./now')
+import now from './now'
 
 export class InfoProto extends EventEmitter {
 
@@ -13,7 +13,7 @@ export class InfoProto extends EventEmitter {
   public beginTime: number = 0
   public prevTime: number = 0
 
-  constructor() {
+  constructor () {
     super()
 
     const el = document.createElement('div')
@@ -37,15 +37,15 @@ export class InfoProto extends EventEmitter {
 
   }
 
-  public addPanel(panel: Panel) {
+  public addPanel (panel: Panel) {
     this._htmlElement.appendChild(panel.getElement())
     this.panels.push(panel)
     return panel
   }
 
-  public displayPanel(id: number) {
+  public displayPanel (id: number) {
     const el = this._htmlElement
-    for (var i = 0; i < el.children.length; i++) {
+    for (let i = 0; i < el.children.length; i++) {
       let canvas = el.children[i] as HTMLCanvasElement
       if (i === id) {
         canvas.style.display = 'block'
@@ -56,7 +56,7 @@ export class InfoProto extends EventEmitter {
     this._currentPanelId = id
   }
 
-  public getPanelByName(name: string): Panel {
+  public getPanelByName (name: string): Panel {
     for (let i = 0; i < this.panels.length; i++) {
       let panel = this.panels[i] as Panel
       if (panel.getName() === name) return panel
@@ -64,22 +64,22 @@ export class InfoProto extends EventEmitter {
     return null
   }
 
-  public getPanelById(id: number): Panel {
+  public getPanelById (id: number): Panel {
     let panel = this.panels[id]
     if (panel) return panel
     return null
   }
 
-  public switchPanel() {
+  public switchPanel () {
     this._currentPanelId += 1
     this.displayPanel(this._currentPanelId % this.panels.length)
   }
 
-  public getElement() {
+  public getElement () {
     return this._htmlElement
   }
 
-  public initPanelData(name: string, value: any) {
+  public initPanelData (name: string, value: any) {
     if (this.panelData[name] === undefined) {
       this.panelData[name] = value
     } else {
@@ -87,7 +87,7 @@ export class InfoProto extends EventEmitter {
     }
   }
 
-  public setPanelData(name: string, value: any) {
+  public setPanelData (name: string, value: any) {
     if (this.panelData[name] !== undefined) {
       this.panelData[name] = value
     } else {
@@ -95,7 +95,7 @@ export class InfoProto extends EventEmitter {
     }
   }
 
-  public getPanelData(name: string) {
+  public getPanelData (name: string) {
     if (this.panelData[name] !== undefined) {
       return this.panelData[name]
     } else {
@@ -103,23 +103,22 @@ export class InfoProto extends EventEmitter {
     }
   }
 
-  public begin() {
+  public begin () {
     let time = this.beginTime = now()
     this.emit('begin', { target: this, time })
     return time
   }
 
-  public end() {
-    var time = now()
+  public end () {
+    const time = now()
     this.emit('end', { target: this, time })
     return time
   }
 
-  public update() {
+  public update () {
     let time = this.beginTime = this.end()
     this.emit('update', { target: this, time })
     return time
   }
-
 
 }
