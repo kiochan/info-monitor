@@ -19,11 +19,11 @@
     "typescript"
   ],
   "typings": "./build/index.d.ts",
-  "author": "StudioASC",
+  "author": "Kiochan <sunxingchen@live.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/StudioASC/node-info.git"
+    "url": "https://github.com/kiochan/info-monitor.git"
   },
   "dependencies": {},
   "devDependencies": {
