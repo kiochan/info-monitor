@@ -8,7 +8,8 @@
     "pack": "webpack",
     "watch": "webpack --watch",
     "dev": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "keywords": [
     "fps",
@@ -31,6 +32,8 @@
     "awesome-typescript-loader": "^5.2.0",
     "html-webpack-plugin": "^3.2.0",
     "source-map-loader": "^0.2.3",
+    "tslint": "^5.16.0",
+    "tslint-config-standard": "^8.0.1",
     "typescript": "^2.9.2",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8",
