@@ -19,12 +19,12 @@ This class provides a simple info box that will help you monitor your code perfo
 
 You can find it in git repo `release/info.min.js`
 ```
-git clone https://github.com/StudioASC/node-info
 ```
 
 or via bower
 ```
 bower install info-monitor
+git clone https://github.com/kiochan/info-monitor
 ```
 
 2. Move `info.min.js` into your project, then link script into your html files before `</body>` tag:
@@ -89,7 +89,7 @@ import Info from 'info'
 Bookmarklet
 You can add this code to any page using the following bookmarklet:
 ```javascript
-javascript:(function(){var script=document.createElement('script');script.onload=function(){var m=new Info();document.body.appendChild(m.getElement());requestAnimationFrame(function loop(){m.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/StudioASC/node-info/master/release/info.min.js';document.head.appendChild(script);})()
+javascript:(function(){var script=document.createElement('script');script.onload=function(){var m=new Info();document.body.appendChild(m.getElement());requestAnimationFrame(function loop(){m.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/kiochan/info-monitor/master/release/info.min.js';document.head.appendChild(script);})()
 ```
 
 ## User-Defined Panel  
