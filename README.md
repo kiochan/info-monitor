@@ -19,11 +19,6 @@ This class provides a simple info box that will help you monitor your code perfo
 
 You can find it in git repo `release/info.min.js`
 ```
-```
-
-or via bower
-```
-bower install info-monitor
 git clone https://github.com/kiochan/info-monitor
 ```
 
