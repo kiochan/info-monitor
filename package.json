@@ -1,6 +1,6 @@
 {
   "name": "info-monitor",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "a JavaScript Performance Monitor",
   "main": "./build/index.js",
   "scripts": {
