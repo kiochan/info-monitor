@@ -1,15 +1,15 @@
-import { Info } from './info'
+import Info from "./Info";
+import InfoProto from "./InfoProto";
+import Panel from "./Panel";
 
-export default Info
+export default Info;
 
-export { InfoProto } from './info-proto'
-
-export { Panel } from './panel'
+export { Info, InfoProto, Panel };
 
 // register if no conflict
-let w = window as any
+let w = window as any;
 if (w.Info === undefined) {
-  w.Info = Info
+  w.Info = Info;
 } else {
-  w.__info_no_conflict = Info
+  w.__info_no_conflict = Info;
 }
